@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "tailwindcss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+@theme{
+  --font-poppins: "Poppins", sans-serif;
+  --font-outfit: "Outfit", sans-serif
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #1D91CE !important; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.swiper-button-prev {
+  left: 20px;
+}
+.swiper-button-next {
+  right: 20px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #1D91CE !important;
+}
+
