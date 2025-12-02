@@ -139,7 +139,7 @@ pg360-site-frontend/
     ```
 ---
 
-##🤝 Colaboradores
+## 🤝 Colaboradores
 
 Este projeto é um esforço conjunto da nossa equipe:
 
