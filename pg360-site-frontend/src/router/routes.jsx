@@ -8,6 +8,7 @@ import AgendaCultural from '../components/Agenda/AgendaCultural.jsx';
 import Agenda from '../components/Agenda/Agenda.jsx';
 import LoginAdm from '../components/Administracao/LoginAdm.jsx';
 import Dashboard from '../components/Administracao/Dashboard.jsx';
+import RotaProtegida from '../components/RotaProtegida.jsx';
 
 function AppRouter(){
     return(
@@ -16,9 +17,12 @@ function AppRouter(){
                 <Route path='/eventos' element={<Eventos/>} />
                 <Route path='/atracoes' element={<AtracoesPasseios/>} />
                 <Route path='/agendacultural' element={<AgendaCultural/>} />
-                <Route path='/entrar' element={<LoginAdm/>} />
-                <Route path="/dashboard" element={<Dashboard />} />
                 <Route path='/*' element={<h1> Página Não Encontrada </h1>} />
+                <Route path='/entrar' element={<LoginAdm/>} />
+
+                <Route element={<RotaProtegida />}>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                </Route>
             </Routes>
     );
 }
