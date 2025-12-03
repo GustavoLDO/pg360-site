@@ -16,8 +16,10 @@ public class Local {
     @Column(nullable = false)
     private String nmLocal;
 
-
+    @Column(length = 2000)
     private String dsLocal;
+
+    @Column(length = 2000)
     private String endereco;
     private String latitude;
     private String longitude;
