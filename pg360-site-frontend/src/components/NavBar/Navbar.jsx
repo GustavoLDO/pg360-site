@@ -33,8 +33,6 @@ function Navbar(){
       </div>
 
       <div className="flex items-center space-x-4">
-        <FaUserCircle className="text-white text-3xl"/>
-        
        
         <Link to ="/entrar" className="bg-[#FFA303] text-white px-5 py-2 rounded-md font-semibold transition delay-150 duration-300 ease-in-out hover:bg-[#FFB703">Entrar</Link> 
         

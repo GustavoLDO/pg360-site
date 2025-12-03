@@ -13,15 +13,21 @@ function CardEvento({ evento }) {
     local 
   } = evento;
 
-  const dataInicio = new Date(dtInicioEvento).toLocaleDateString('pt-BR');
-  const dataFim = new Date(dtFimEvento).toLocaleDateString('pt-BR');
+  const formatarData = (dataString) => {
+    if (!dataString) return "Data ind.";
+    const [ano, mes, dia] = dataString.split('-');
+    return `${dia}/${mes}/${ano}`;
+  };
+
+  const dataInicio = formatarData(dtInicioEvento);
+  const dataFim = formatarData(dtFimEvento);
   const imageUrl = imagens && imagens.length > 0 ? imagens[0] : null;
 
   const nomeLocal = local ? local.nmLocal : "Local não informado";
   const enderecoCompleto = local ? local.endereco : "Endereço não informado";
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full max-w-sm mx-auto my-4">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full max-w-sm mx-auto my-3 flex flex-col h-full"> 
       
       {imageUrl ? (
         <img 
@@ -35,31 +41,28 @@ function CardEvento({ evento }) {
         </div>
       )}
 
-      <div className="p-4 flex flex-col items-center text-center">
+      <div className="p-4 flex flex-col items-center text-center flex-grow">
         <h3 className="text-2xl font-extrabold text-gray-900 mb-2 leading-tight font-outfit">
           {nmEvento}
         </h3>
         
-        <p className="text-gray-700 text-sm mb-4 px-2 line-clamp-3 h-16 font-poppins">
+        <p className="text-gray-700 text-sm mb-4 px-2 line-clamp-3 font-poppins">
           {dsEvento || ""}
         </p> 
 
         {(nomeLocal !== "Local não informado" || enderecoCompleto !== "Endereço não informado") && (
-          <div className="mt-2">
+          <div className="mt-auto">
             <div className="flex items-center justify-center text-gray-900 mb-1">
               <svg className="w-5 h-5 mr-1 text-[#1D91CE]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
               </svg>
               <span className="text-base font-bold font-poppins">{nomeLocal}</span>
             </div>
-            <p className="text-gray-600 text-sm italic px-2 font-poppins">
-              {enderecoCompleto}
-            </p>
           </div>
         )}
       </div>
 
-      <div className="p-4 bg-[#1D91CE] text-white text-center">
+      <div className="p-4 bg-[#1D91CE] text-white text-center mt-auto">
         <p className="font-semibold text-lg font-poppins">Início: {dataInicio}</p>
         <p className="font-semibold text-lg font-poppins">Fim: {dataFim}</p>
       </div>
@@ -134,9 +137,10 @@ function ListarEvento() {
     : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6";
         
   return (
-    <div className="w-full"> 
+    <div className="w-full flex flex-col min-h-screen">
       <Header />
-      <div className="container mx-auto p-4">
+      
+      <div className="container mx-auto px-4 pb-24"> 
         <div className={containerClasses}>
           {eventos.map(evento => (
             <CardEvento key={evento.cdEvento} evento={evento} />

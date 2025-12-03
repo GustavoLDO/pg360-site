@@ -121,7 +121,7 @@ function AtracoesPasseios() {
 								key={spot.id}
 								className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row"
 							>
-								<div className="md:w-1/2 h-64 md:h-auto bg-gray-300 relative">
+								<div className="md:w-1/2 h-64 md:h-80 bg-gray-300 relative">
 									<img
 										src={spot.imagem}
 										alt={spot.nome}
