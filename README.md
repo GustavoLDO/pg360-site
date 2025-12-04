@@ -143,7 +143,7 @@ Este projeto é um esforço conjunto da nossa equipe:
 | Nome | Função Principal | GitHub |
 | :--- | :--- | :--- |
 | **Kalebe Mezenes** | [Desenvolvedor Back End, DBA e Analista de QA] | [@KalebeMenezesMj](https://github.com/KalebeMenezesMj) |
-| **Gustavo Lemos** | [Desenvolvedor Full Stack e Analista de QA] | [@GustavoInCode24](https://github.com/GustavoInCode24) |
+| **Gustavo Lemos** | [Desenvolvedor Full Stack e Analista de QA] | [@GustavoLDO](https://github.com/GustavoLDO) |
 | **Gabriel Nobre** | [Analista de QA] | [@Gabriel-Nobre](https://github.com/Gabriel-Nobre) |
 | **Nicolas Rodrigues** | [Desenvolvedor Front End e Design] | [@ncdsrNicolas](https://github.com/ncdsrNicolas) |
 | **Lucas Henrique** | [Desenvolvedor Full Stack e Design] | [@yonevxs](https://github.com/yonevxs)  |
